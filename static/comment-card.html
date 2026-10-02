@@ -1,0 +1,32 @@
+<template id="comment-card-template">
+  <article class="relative border-t border-neutral-100 px-4 py-4 sm:px-6" data-comment-card>
+    <div class="flex gap-3">
+      <div class="flex size-9 shrink-0 items-center justify-center rounded-full bg-neutral-100 text-sm text-neutral-600" aria-hidden="true">
+        <i class="fa-regular fa-user"></i>
+      </div>
+      <div class="min-w-0 flex-1">
+        <div class="flex flex-wrap items-baseline gap-x-2">
+          <a class="font-semibold text-neutral-950 hover:underline" href="#" data-comment-author>顯示名稱</a>
+          <time class="text-sm text-neutral-500" data-comment-created-at datetime="">剛剛</time>
+        </div>
+        <p class="mt-1 whitespace-pre-wrap break-words text-[15px] leading-6" data-comment-body>留言內容</p>
+        <div class="mt-2 grid gap-2 overflow-hidden rounded-2xl" data-comment-images hidden></div>
+        <div class="mt-2 flex flex-wrap items-center gap-x-4 text-sm text-neutral-600">
+          <button class="inline-flex min-h-9 items-center gap-2 rounded-full hover:text-neutral-950 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900" type="button" data-comment-reply aria-label="回覆留言">
+            <i class="fa-regular fa-comment" aria-hidden="true"></i><span>回覆</span>
+          </button>
+          <button class="inline-flex min-h-9 items-center gap-2 rounded-full hover:text-rose-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900" type="button" data-comment-like aria-label="按讚留言">
+            <i class="fa-regular fa-heart" aria-hidden="true"></i><span data-comment-like-count>讚</span>
+          </button>
+          <button class="font-medium hover:text-neutral-950 focus-visible:underline" type="button" data-toggle-replies aria-expanded="false" hidden>
+            <span data-direct-reply-count>0 則回覆</span>
+          </button>
+        </div>
+        <div class="ml-1 mt-2 border-l-2 border-neutral-100 pl-3 sm:ml-2 sm:pl-4" data-comment-children hidden></div>
+      </div>
+      <button class="size-9 shrink-0 rounded-full text-neutral-500 hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-neutral-900" type="button" aria-label="更多留言操作">
+        <i class="fa-solid fa-ellipsis" aria-hidden="true"></i>
+      </button>
+    </div>
+  </article>
+</template>

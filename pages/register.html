@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="zh-Hant">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Thread · 註冊</title>
+    <link rel="stylesheet" href="/static/styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+  </head>
+  <body data-page="register" class="min-h-screen bg-neutral-50 text-neutral-950">
+    <div data-site-header></div>
+    <main class="mx-auto max-w-md px-5 py-12">
+      <h1 class="mb-2 text-2xl font-bold">註冊</h1>
+      <form id="auth-form" class="space-y-4 rounded-2xl border border-neutral-200 bg-white p-6">
+        <label class="block text-sm font-medium" for="display-name">顯示名稱</label>
+        <input id="display-name" name="display_name" type="text" autocomplete="nickname" minlength="2" maxlength="30" required class="w-full rounded-lg border border-neutral-300 px-3 py-2">
+        <label class="block text-sm font-medium" for="email">Email</label>
+        <input id="email" name="email" type="email" autocomplete="email" required class="w-full rounded-lg border border-neutral-300 px-3 py-2">
+        <label class="block text-sm font-medium" for="password">密碼（至少 8 個字元）</label>
+        <input id="password" name="password" type="password" autocomplete="new-password" minlength="8" maxlength="128" required class="w-full rounded-lg border border-neutral-300 px-3 py-2">
+        <label class="block text-sm font-medium" for="confirm-password">確認密碼</label>
+        <input id="confirm-password" name="confirm_password" type="password" autocomplete="new-password" required class="w-full rounded-lg border border-neutral-300 px-3 py-2">
+        <p id="form-error" role="alert" class="text-sm text-red-700" hidden></p>
+        <button type="submit" class="w-full rounded-full bg-neutral-950 px-4 py-2 font-semibold text-white disabled:opacity-50">註冊</button>
+      </form>
+      <p class="mt-5 text-sm text-neutral-600">已有帳號？<a class="font-semibold text-neutral-950 underline" href="/login">前往登入</a></p>
+    </main>
+    <script src="/static/images.js" defer></script>
+    <script src="/static/site.js" defer></script>
+    <script src="/static/auth.js" defer></script>
+  </body>
+</html>

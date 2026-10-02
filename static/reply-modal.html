@@ -1,0 +1,33 @@
+<dialog class="m-0 h-dvh max-h-none w-full max-w-none bg-transparent p-0 backdrop:bg-neutral-950/40 sm:m-auto sm:h-auto sm:max-h-[min(90dvh,48rem)] sm:max-w-xl sm:rounded-2xl" id="reply-modal" aria-labelledby="reply-modal-title">
+  <section class="flex h-full flex-col bg-white sm:h-auto sm:max-h-[min(90dvh,48rem)] sm:rounded-2xl">
+    <header class="flex items-center justify-between border-b border-neutral-200 px-4 py-3 sm:px-5">
+      <h2 class="text-lg font-bold" id="reply-modal-title">回覆</h2>
+      <button class="flex size-10 items-center justify-center rounded-full text-neutral-700 hover:bg-neutral-100 focus-visible:outline-2 focus-visible:outline-neutral-900" type="button" data-modal-close aria-label="關閉回覆視窗">
+        <i class="fa-solid fa-xmark" aria-hidden="true"></i>
+      </button>
+    </header>
+    <div class="min-h-0 flex-1 overflow-y-auto p-4 sm:p-5">
+      <div class="mb-4 rounded-xl bg-neutral-50 p-4" data-reply-context>
+        <p class="text-sm font-semibold text-neutral-700" data-context-author>回覆貼文</p>
+        <p class="mt-1 line-clamp-4 whitespace-pre-wrap break-words text-sm text-neutral-600" data-context-body>貼文內容將於資料載入後顯示。</p>
+      </div>
+      <form class="space-y-4" data-reply-form>
+        <label class="sr-only" for="reply-body">回覆內容</label>
+        <textarea class="min-h-36 w-full resize-y rounded-xl border border-neutral-300 p-3 text-base outline-none placeholder:text-neutral-400 focus:border-neutral-700 focus:ring-2 focus:ring-neutral-200" id="reply-body" name="body" maxlength="500" placeholder="寫下你的回覆……" data-reply-input></textarea>
+        <div class="flex flex-wrap items-center justify-between gap-3">
+          <div>
+            <label class="inline-flex cursor-pointer items-center gap-2 rounded-full px-3 py-2 text-sm font-semibold text-neutral-700 hover:bg-neutral-100" for="reply-images">
+              <i class="fa-regular fa-image" aria-hidden="true"></i>加入圖片
+            </label>
+            <input class="sr-only" id="reply-images" type="file" accept="image/jpeg,image/png,image/webp" multiple data-reply-images>
+            <p class="mt-1 text-xs text-neutral-500">最多 3 張圖片，可只回覆文字或附加圖片</p>
+          </div>
+          <button class="rounded-full bg-neutral-950 px-5 py-2.5 text-sm font-semibold text-white hover:bg-neutral-700 focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-neutral-900 disabled:opacity-50" type="submit" aria-describedby="reply-submit-note" data-reply-submit>送出回覆</button>
+        </div>
+        <p class="text-xs text-neutral-500" id="reply-submit-note">留言送出後會加入此貼文串。</p>
+        <p class="text-sm text-red-700" role="alert" data-reply-error hidden></p>
+        <div class="flex flex-wrap gap-2" aria-label="已選圖片預覽" data-reply-preview></div>
+      </form>
+    </div>
+  </section>
+</dialog>
